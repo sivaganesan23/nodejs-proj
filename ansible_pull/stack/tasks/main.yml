@@ -1,0 +1,26 @@
+- name: Download setup_10.x script
+  get_url: 
+    url: https://deb.nodesource.com/setup_10.x 
+    dest: /opt 
+    mode: 755
+
+- name: Setup Node.js
+  command: /opt/setup_10.x
+
+- name: Install Node.js
+  package: 
+    name: nodejs 
+    state: present
+
+- name: Download Source code
+  get_url:
+    url: https://github.com/opsworkshop/node-hello.git
+    dest: /home/centos    
+
+- name: Move to source code package
+  shell: "cd /home/centos/node-hello"     
+
+- name: Install Npm
+  package: 
+    name: npm 
+    state: present

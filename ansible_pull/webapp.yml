@@ -1,0 +1,6 @@
+- name: Setup Web Service and App Service on Server
+  hosts: localhost
+  become: yes
+  roles:
+    - stack
+
