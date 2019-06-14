@@ -7,13 +7,13 @@
 - name: Install Node.js
   package: 
     name: nodejs 
-    state: present
+    state: present   
 
 - name: Download Source code
-  get_url:
-    url: https://github.com/opsworkshop/node-hello.git
-    dest: /home/centos    
-
+  git:
+    repo: 'https://github.com/opsworkshop/node-hello.git'
+    dest: /home/centos
+    
 - name: Install Npm
   package: 
     name: npm 
