@@ -14,6 +14,9 @@
     repo: 'https://github.com/opsworkshop/node-hello.git'
     dest: /home/centos/nodejs-app/
     
+- name: Move to source code package
+  shell: "cd /home/centos/nodejs-app/"     
+    
 - name: Install Npm
   package: 
     name: npm 
