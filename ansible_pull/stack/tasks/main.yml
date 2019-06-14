@@ -4,9 +4,6 @@
     dest: /opt 
     mode: 755
 
-- name: Setup Node.js
-  command: /opt/setup_10.x
-
 - name: Install Node.js
   package: 
     name: nodejs 
