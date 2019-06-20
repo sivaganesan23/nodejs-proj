@@ -52,10 +52,7 @@ resource "null_resource" "appsetup" {
         "sudo yum install epel-release -y",
         "sudo yum install ansible git -y",
         "ansible-pull -U https://github.com/sivaganesan23/nodejs-proj.git ansible_pull/webapp.yml",
-        "sudo systemctl enable httpd",
-          "sudo systemctl start httpd",
-          "sudo systemctl enable tomcat",
-          "sudo systemctl start tomcat",
+        "node app.js",
           
           ]
 
