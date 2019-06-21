@@ -7,8 +7,8 @@ stage('CLONE') {
 
  stage('ENV-CREATE') {
     withCredentials([file(credentialsId: 'CENTOS-USER-PEM-FILE', variable: 'FILE')]) {
-    sh '''cat $FILE >/home/centos/devops.pem
-      chmod 600 /home/centos/devops.pem
+    sh '''sudo cat $FILE >/home/centos/devops.pem
+      sudo chmod 600 /home/centos/devops.pem
      '''
     }
    dir('TERRAFORM') {
