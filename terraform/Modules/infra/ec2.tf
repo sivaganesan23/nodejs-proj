@@ -52,6 +52,7 @@ resource "null_resource" "appsetup" {
         "sudo yum install epel-release -y",
         "sudo yum install ansible git -y",
         "ansible-pull -U https://github.com/sivaganesan23/nodejs-proj.git ansible_pull/webapp.yml",
+        "cd /home/centos/nodejs-app/",
         "node app.js",
           
           ]
