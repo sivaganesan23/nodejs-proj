@@ -53,8 +53,8 @@ resource "null_resource" "appsetup" {
         "sudo yum install ansible git -y",
         "ansible-pull -U https://github.com/sivaganesan23/nodejs-proj.git ansible_pull/webapp.yml",
         "cd /home/centos/nodejs-app/",
-        "nohup node app.js >  /dev/null &",
-          
+        "sudo npm install forever -g",
+        "forever start app.js".        
           ]
 
         connection {
